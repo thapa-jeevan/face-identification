@@ -4,9 +4,9 @@ import numpy as np
 import torch
 from sklearn.metrics import accuracy_score
 
-from lfw_dataset import get_dataloader
-from resnet18 import resnet18
-from settings import CHECKPOINT_DIR
+from src.lfw_dataset import get_dataloader
+from src.resnet18 import resnet18
+from src.settings import CHECKPOINT_DIR
 
 BATCH_SIZE = 32
 
