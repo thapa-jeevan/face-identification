@@ -25,7 +25,7 @@ def predict(model, dataloader_):
 
 if __name__ == '__main__':
     checkpoint_path = os.path.join(CHECKPOINT_DIR, "face_identification.pt")
-    model = resnet18(num_classes=2)
+    model = resnet18(num_classes=256)
     model.cuda()
     model.load_state_dict(torch.load(checkpoint_path)["model_state_dict"])
 
