@@ -7,7 +7,6 @@ import torch
 from PIL import Image
 from torch.utils.data import Dataset, IterableDataset
 
-
 IMG_DIR = "data/CelebA/img_align_celeba/"
 IDENTITY_FILE = "data/CelebA/identity_CelebA.txt"
 
@@ -50,7 +49,7 @@ class CelebaDataset(IterableDataset):
 
         for img_name, sub_id in zip(batch_imgs, batch_ids):
             img_path = os.path.join(self.img_dir, img_name)
-            img = Image.open(img_path) #.convert('L')
+            img = Image.open(img_path)  # .convert('L')
             if self.transform:
                 img = self.transform(img)
 

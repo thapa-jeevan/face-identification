@@ -5,9 +5,9 @@ import torch
 from torchvision import transforms
 from tqdm import tqdm
 
-from src.face_identification.celeba_dataset import get_dataloader as get_pretrain_dataloader
-from src.face_identification.loss import contrastive_loss_entropy
-from src.models.model_resnet import resnet18
+from src.celeba_dataset import get_dataloader as get_pretrain_dataloader
+from src.loss import contrastive_loss_entropy
+from src.resnet18 import resnet18
 from src.settings import CHECKPOINT_DIR
 from src.settings import IMG_SHAPE
 from src.utils import seed_everything
